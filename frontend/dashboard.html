@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <h2>🏋️ Fitness Dashboard</h2>
+    <nav>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="goal.html">Goals</a>
+      <a href="workout.html">Workouts</a>
+      <a href="activity.html">Activities</a>
+      <a href="diet.html">Diet & Water</a>
+      <a href="reminder.html">Reminders</a>
+    </nav>
+    <button id="logoutBtn" class="btn small">Logout</button>
+  </div>
+
+  <div class="container">
+    <h1>Welcome Back 👋</h1>
+
+    <!-- Stats Cards -->
+    <div id="stats" class="stats-grid">
+      <div class="stat-card" id="goalsStat">Goals: 0</div>
+      <div class="stat-card" id="achievedGoalsStat">Achieved: 0</div>
+      <div class="stat-card" id="pendingGoalsStat">Pending: 0</div>
+      <div class="stat-card" id="workoutsStat">Workouts: 0</div>
+      <div class="stat-card" id="activitiesStat">Activities: 0</div>
+      <div class="stat-card" id="caloriesStat">Calories Burned: 0 kcal</div>
+      <div class="stat-card" id="mealsStat">Meals: 0</div>
+      <div class="stat-card" id="waterStat">Water Logs: 0</div>
+      <div class="stat-card" id="remindersStat">Reminders: 0</div>
+    </div>
+
+    <h2>Progress Charts</h2>
+    <div class="charts-grid">
+      <canvas id="goalsChart" width="400" height="200"></canvas>
+      <canvas id="workoutsChart" width="400" height="200"></canvas>
+      <canvas id="activitiesChart" width="400" height="200"></canvas>
+      <canvas id="dietChart" width="400" height="200"></canvas>
+      <canvas id="remindersChart" width="400" height="200"></canvas>
+    </div>
+  </div>
+
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

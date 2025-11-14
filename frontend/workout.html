@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workouts</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <h2>🏋️ Fitness Dashboard</h2>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="goal.html">Goals</a>
+      <a href="workout.html" class="active">Workouts</a>
+      <a href="activity.html">Activities</a>
+      <a href="diet.html">Diet & Water</a>
+      <a href="reminder.html">Reminders</a>
+    </nav>
+    <button onclick="logout()" class="btn small">Logout</button>
+  </div>
+
+  <div class="container">
+    <h1>🏋️ Workouts</h1>
+
+    <form id="workoutForm" class="card">
+      <input type="text" id="workoutType" name="workoutType" placeholder="Workout Type" required>
+      <input type="number" id="duration" name="duration" placeholder="Duration (mins)" required>
+      <input type="number" id="caloriesBurned" name="caloriesBurned" placeholder="Calories Burned" required>
+      <button type="submit" class="btn">Add Workout</button>
+    </form>
+
+    <h3>Your Workouts</h3>
+    <ul id="workoutList" class="list"></ul>
+  </div>
+
+  <script type="module" src="js/workouts.js"></script>
+</body>
+</html>

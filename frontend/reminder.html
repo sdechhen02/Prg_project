@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reminders</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <h2>🏋️ Fitness Dashboard</h2>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="goal.html">Goals</a>
+      <a href="workout.html">Workouts</a>
+      <a href="activity.html">Activities</a>
+      <a href="diet.html">Diet & Water</a>
+      <a href="reminder.html" class="active">Reminders</a>
+    </nav>
+    <button onclick="logout()" class="btn small">Logout</button>
+  </div>
+
+  <div class="container">
+    <h1>⏰ Reminders</h1>
+
+    <!-- Add Reminder -->
+    <form id="reminderForm" class="card">
+      <input type="text" id="title" name="title" placeholder="Reminder Title" required>
+      <input type="datetime-local" id="time" name="time" required>
+      <select id="type" name="type" required>
+        <option value="" disabled selected>Select Type</option>
+        <option value="goal">Goal</option>
+        <option value="workout">Workout</option>
+        <option value="meal">Meal</option>
+        <option value="water">Water</option>
+      </select>
+      <button type="submit" class="btn">Add Reminder</button>
+    </form>
+
+    <h3>Upcoming Reminders</h3>
+    <ul id="reminderList" class="list"></ul>
+  </div>
+
+  <script type="module" src="js/reminders.js"></script>
+</body>
+</html>

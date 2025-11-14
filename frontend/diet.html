@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Diet & Water</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <h2>🏋️ Fitness Dashboard</h2>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="goal.html">Goals</a>
+      <a href="workout.html">Workouts</a>
+      <a href="activity.html">Activities</a>
+      <a href="diet.html" class="active">Diet & Water</a>
+      <a href="reminder.html">Reminders</a>
+    </nav>
+    <button onclick="logout()" class="btn small">Logout</button>
+  </div>
+
+  <div class="container">
+    <h1>🍽️ Diet & 💧 Water</h1>
+
+    <!-- Add Meal -->
+    <form id="mealForm" class="card">
+      <input type="text" id="mealName" name="mealName" placeholder="Meal Name" required>
+      <input type="number" id="calories" name="calories" placeholder="Calories" required>
+      <button type="submit" class="btn">Add Meal</button>
+    </form>
+
+    <h3>Your Meals</h3>
+    <ul id="mealList" class="list"></ul>
+
+    <!-- Add Water -->
+    <form id="waterForm" class="card">
+      <input type="number" id="amount" name="amount" placeholder="Water Intake (ml)" required>
+      <button type="submit" class="btn">Log Water</button>
+    </form>
+
+    <h3>Water Intake</h3>
+    <ul id="waterList" class="list"></ul>
+  </div>
+
+  <script type="module" src="js/diet.js"></script>
+</body>
+</html>

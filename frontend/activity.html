@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Activities</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <h2>🏋️ Fitness Dashboard</h2>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="goal.html">Goals</a>
+      <a href="workout.html">Workouts</a>
+      <a href="activity.html" class="active">Activities</a>
+      <a href="diet.html">Diet & Water</a>
+      <a href="reminder.html">Reminders</a>
+    </nav>
+    <button onclick="logout()" class="btn small">Logout</button>
+  </div>
+
+  <div class="container">
+    <h1>🧘 Activities</h1>
+
+    <!-- Add Activity Form -->
+    <form id="activityForm" class="card">
+      <input type="text" id="activityType" name="activityType" placeholder="Activity Type" required>
+      <input type="number" id="calories" name="calories" placeholder="Calories Burned" required>
+      <button type="submit" class="btn">Add Activity</button>
+    </form>
+
+    <!-- Activities List -->
+    <h3>Your Activities</h3>
+    <ul id="activityList" class="list"></ul>
+  </div>
+
+  <script type="module" src="js/activities.js"></script>
+</body>
+</html>
