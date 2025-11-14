@@ -29,6 +29,7 @@ export const deleteGoal = async (req, res) => {
   res.json({ message: "Deleted" });
 };
 
+//Complete goal
 // Mark goal as achieved
 export const achieveGoal = async (req, res) => {
   const goal = await Goal.findOneAndUpdate(
