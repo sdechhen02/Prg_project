@@ -1,6 +1,9 @@
 import { apiFetch } from "./api.js";
 
-document.addEventListener("DOMContentLoaded", loadGoals);
+document.addEventListener("DOMContentLoaded", () => {
+  loadGoals();
+  setupLogout(); // initialize logout
+});
 
 // Load all goals
 async function loadGoals() {
@@ -40,3 +43,19 @@ window.deleteGoal = async (id) => {
   await apiFetch(`/goals/${id}`, "DELETE");
   loadGoals();
 };
+
+// -----------------------------
+// Logout function
+// -----------------------------
+function setupLogout() {
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (!logoutBtn) return;
+
+  logoutBtn.addEventListener("click", () => {
+    // Remove JWT token from localStorage
+    localStorage.removeItem("token"); // adjust key if different
+
+    // Redirect to login page
+    window.location.href = "login.html";
+  });
+}

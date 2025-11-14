@@ -1,10 +1,18 @@
 import { apiFetch } from "./api.js";
 
-document.addEventListener("DOMContentLoaded", loadWorkouts);
+// Run when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  loadWorkouts();
+  setupLogout(); // initialize logout button
+});
 
+// -----------------------------
+// Load workouts
+// -----------------------------
 async function loadWorkouts() {
   const data = await apiFetch("/workouts");
   const list = document.getElementById("workoutList");
+  if (!list) return;
   list.innerHTML = data
     .map(
       (w) => `
@@ -16,17 +24,52 @@ async function loadWorkouts() {
     .join("");
 }
 
-document.getElementById("workoutForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const workoutType = e.target.workoutType.value;
-  const duration = Number(e.target.duration.value);
-  const caloriesBurned = Number(e.target.caloriesBurned.value);
-  await apiFetch("/workouts", "POST", { workoutType, duration, caloriesBurned });
-  e.target.reset();
-  loadWorkouts();
-});
+// -----------------------------
+// Add new workout
+// -----------------------------
+const workoutForm = document.getElementById("workoutForm");
+if (workoutForm) {
+  workoutForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const workoutType = e.target.workoutType.value;
+    const duration = Number(e.target.duration.value);
+    const caloriesBurned = Number(e.target.caloriesBurned.value);
+    try {
+      await apiFetch("/workouts", "POST", { workoutType, duration, caloriesBurned });
+      e.target.reset();
+      loadWorkouts();
+    } catch (err) {
+      console.error(err);
+      alert("Failed to add workout");
+    }
+  });
+}
 
+// -----------------------------
+// Delete workout
+// -----------------------------
 window.deleteWorkout = async (id) => {
-  await apiFetch(`/workouts/${id}`, "DELETE");
-  loadWorkouts();
+  try {
+    await apiFetch(`/workouts/${id}`, "DELETE");
+    loadWorkouts();
+  } catch (err) {
+    console.error(err);
+    alert("Failed to delete workout");
+  }
 };
+
+// -----------------------------
+// Logout function
+// -----------------------------
+function setupLogout() {
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (!logoutBtn) return;
+
+  logoutBtn.addEventListener("click", () => {
+    // Remove JWT token
+    localStorage.removeItem("token");
+
+    // Redirect to login page
+    window.location.href = "login.html";
+  });
+}
