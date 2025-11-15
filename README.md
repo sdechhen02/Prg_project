@@ -3,6 +3,7 @@
 A collaborative web development project built using HTML, CSS, JavaScript, Node.js, and SQLite following the MVC architecture and Figma prototype.
 
 👩‍💻 Team Members
+
 Sonam Dechen – UI/UX & Frontend Design
 Wireframe, layout, color theme, basic HTML structure
 
