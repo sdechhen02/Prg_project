@@ -3,22 +3,22 @@
 A collaborative web development project built using HTML, CSS, JavaScript, Node.js, and SQLite following the MVC architecture and Figma prototype.
 
 👩‍💻 Team Members
--Member 1 – UI/UX & Frontend Design
+Sonam Dechen – UI/UX & Frontend Design
 Wireframe, layout, color theme, basic HTML structure
 
-Member 2 – Frontend Development
+Sonam Choki– Frontend Development
 Full HTML + CSS pages, forms, responsiveness
 
-Member 3 – JavaScript Developer
+Sonam Wangmo Tamang– JavaScript Developer
 DOM handling, form validation, API integration logic
 
-Member 4 – Backend Developer
+Sangay Choden – Backend Developer
 Node.js setup, routes, controllers, authentication
 
-Member 5 – Database Manager
+Sonam Wangchuk – Database Manager
 SQLite setup, tables, CRUD queries, DB optimization
 
-Member 6 – Documentation & Deployment
+Sonam Yoezer Dendup – Documentation & Deployment
 Project report, README, hosting, video demo prep
 
 ## 🚀 Tech Stack
