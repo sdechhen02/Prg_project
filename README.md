@@ -1,42 +1,70 @@
-# 🏋️ Fitness Tracker Web Project
+Fitness Tracker Web Project
+A collaborative full-stack web development project built using HTML, CSS, JavaScript, Node.js, and MongoDB**, following the MVC architecture** and designed from a Figma prototype.
 
-A collaborative web development project built using HTML, CSS, JavaScript, Node.js, and SQLite following the MVC architecture and Figma prototype.
 
-👩‍💻 Team Members
+Team Members & Responsibilities
 
-Sonam Dechen – UI/UX & Frontend Design
-Wireframe, layout, color theme, basic HTML structure
+1. Sonam Dechen – UI/UX & Frontend Design
 
-Sonam Choki– Frontend Development
-Full HTML + CSS pages, forms, responsiveness
+-Wireframes & layout structure
+-Color theme, typography, and visual design
+-Initial HTML structure based on Figma prototype
 
-Sonam Wangmo Tamang– JavaScript Developer
-DOM handling, form validation, API integration logic
+2. Sonam Choki – Frontend Development
 
-Sangay Choden – Backend Developer
-Node.js setup, routes, controllers, authentication
+-Full HTML and CSS implementation
+-Form pages (login, register, workouts, diet, reminders)
+-Responsive design using Flexbox
 
-Sonam Wangchuk – Database Manager
-SQLite setup, tables, CRUD queries, DB optimization
+3. Sonam Wangmo Tamang – JavaScript Developer
 
-Sonam Yoezer Dendup – Documentation & Deployment
-Project report, README, hosting, video demo prep
+-DOM manipulation & dynamic UI elements
+-Form validation
+-API integration & JavaScript logic
+-Chart and reminder interactions
 
-## 🚀 Tech Stack
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js (Express)
-- Database: SQLite
-- Prototype: Figma
-- Tools: VS Code, GitHub, Render
+4. Sangay Choden – Backend Developer
 
-## 💡 Features
-- Login/Signup system
-- Diet tracking
-- Workout logs
-- Progress graph placeholder
-- Reminder section
+-Node.js + Express server setup
+-Controllers, routes & API endpoints
+-User authentication (hashed passwords & JWT)
+-Backend–MongoDB integration
 
-## 🛠 Setup
+5. Sonam Wangchuk – Database Manager (MongoDB)
+
+-MongoDB / MongoDB Atlas setup
+-Mongoose schemas & models (Users, Workouts, Diet, Water, Goals, Reminders)
+-CRUD operations & data validation
+-Database optimization and testing
+
+6. Sonam Yoezer Dendup – Documentation & Deployment
+
+-Project report & README
+-Hosting & deployment (Render / Vercel / GitHub)
+-Video demo and presentation materials
+
+
+Tech Stack
+
+Frontend:HTML, CSS, JavaScript
+Backend: Node.js (Express)
+Database:MongoDB (Mongoose)
+Prototype: Figma
+Tools: VS Code, GitHub, Render/Vercel
+
+Features
+-User authentication (Login/Signup)
+-Workout logging
+-Diet & water tracking
+-Progress chart (placeholder)
+-Reminder section
+-Dashboard overview
+
+Setup
+
 1. Install dependencies
-   ```bash
    npm install
+   
+2. Run the server
+    npm start
+   
